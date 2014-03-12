@@ -1,0 +1,46 @@
+<html>
+<head>
+<style>
+body > div {
+  height: 500px;
+  width: 500px;
+}
+div {
+  background: black;
+  height: 50%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  width: 50%;
+}
+div:before {
+  background: white;
+  bottom: 0;
+  content:"";
+  display: block;
+  height: 141.421356237%;
+  left: 0;
+  position: absolute;
+  width: 70.710678118%;
+  -webkit-transform: rotate(45deg);
+  -webkit-transform-origin: 0 100%;
+}
+</style>
+</head>
+<script>
+function layer() {
+  var d = "<div></div>";
+  var divs = document.querySelectorAll("div")
+  for (var i=0;i<divs.length;i++) {
+    if (divs[i].childElementCount != 0) { continue }
+    divs[i].innerHTML = d+d+d;
+  }
+}
+var t = 3000
+for (var i=0; i<6; i++) {
+  setTimeout(layer,t*i)
+}
+</script>
+<body>
+<div></div>
+</body>

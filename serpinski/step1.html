@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>
+body > div {
+  background: #FAA;
+  height: 500px;
+  width: 500px;
+}
+div {
+  height: 50%;
+  float: left;
+  outline: 1px black solid;
+  /*overflow: hidden;*/
+  position: relative;
+  width: 50%;
+}
+div:before {
+  background: #AFA;
+  bottom: 0;
+  content:"";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  /*transform: rotate(45deg);*/
+  /*transform-origin: 0 100%;*/
+  /*-webkit-transform: rotate(45deg);*/
+  /*-webkit-transform-origin: 0 100%;*/
+}
+</style>
+</head>
+<body>
+<div></div>
+</body>
